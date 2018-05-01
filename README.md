@@ -13,7 +13,7 @@ https://regex101.com/
 https://aurelio.net/regex/apostila-conhecendo-regex.pdf
 
 
-#Quick reference
+# Quick reference
 **\d** = any digit
 <br>
 **\w** = any word character([a-zA-Z0-9_])
