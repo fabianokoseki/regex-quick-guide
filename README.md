@@ -87,12 +87,12 @@ Desired output:
 <details><summary>Click to see the answer(gnu-sed)</summary>
 <p>
 
-`sed -E 's/(^\S*)/**\1**/'`
+`$ sed -E 's/(^\S*)/**\1**/'`
 
 `(^\S*)`: Using capturing group `"()"` matches any non-whitespace character, from zero to unlimited times;
 
 `**\1**`: Get the captured group `\1`, and put "**" between it.
 
-**improve**: check if it is possible to put a "\" if the captured group has a "*"(to not conflict the character * with the reserved * from markdown)
+**improve**: check if it is possible to put a "\\" if the captured group has a "*"(to not conflict the character * with the reserved * from markdown)
 </p>
 </details>
