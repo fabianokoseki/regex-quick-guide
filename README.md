@@ -1,5 +1,4 @@
 # Some good links
----
 
 **To learn regex**
 <br>
@@ -15,7 +14,7 @@ https://aurelio.net/regex/apostila-conhecendo-regex.pdf
 
 
 #Quick reference
----
+
 **\d** = any digit
 <br>
 **\w** = any word character([a-zA-Z0-9_])
@@ -49,7 +48,7 @@ https://aurelio.net/regex/apostila-conhecendo-regex.pdf
 <br>
 
 # Examples
----
+
 ### 1. Insert bolding from markup(\*\*word\**) between the words before the "=" sign
 
 ```
