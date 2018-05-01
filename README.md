@@ -1,4 +1,5 @@
 # Some good links
+---
 
 **To learn regex**
 <br>
@@ -13,7 +14,8 @@ https://regex101.com/
 https://aurelio.net/regex/apostila-conhecendo-regex.pdf
 
 
-# Quick reference
+#Quick reference
+---
 **\d** = any digit
 <br>
 **\w** = any word character([a-zA-Z0-9_])
@@ -44,3 +46,54 @@ https://aurelio.net/regex/apostila-conhecendo-regex.pdf
 <br>
 **{}** = quantifier, matches any times by the input inside the braces
 <br>
+<br>
+
+# Examples
+---
+### 1. Insert bolding from markup(\*\*word\**) between the words before the "=" sign
+
+```
+\d = any digit  
+\w = any word character([a-zA-Z0-9_])  
+. = matches any character (except for line terminators)
+^ = asserts position at start of a line
+$ = asserts position at end of a line
+() = capturing group
+? = optional, matches between zero and one times.
+* = can exist in any quantity
++ = at least once
+[] = list of characters
+[^] = negated list: anything inside that list should tell that it shouldn't appear
+[-] = interval list: character between the range given
+{} = quantifier, matches any times by the input inside the braces
+```
+Desired output:
+
+```
+**\d** = any digit
+**\w** = any word character([a-zA-Z0-9_])
+**.** = matches any character (except for line terminators)
+**^** = asserts position at start of a line
+**$** = asserts position at end of a line
+**()** = capturing group
+**?** = optional, matches between zero and one times.
+***** = can exist in any quantity
+**+** = at least once
+**[]** = list of characters
+**[^]** = negated list: anything inside that list should tell that it shouldn't appear
+**[-]** = interval list: character between the range given
+**{}** = quantifier, matches any times by the input inside the braces
+```
+
+<details><summary>Click to see the answer(gnu-sed)</summary>
+<p>
+
+`sed -E 's/(^\S*)/**\1**/'`
+
+`(^\S*)`: Using capturing group `"()"` matches any non-whitespace character, from zero to unlimited times;
+
+`**\1**`: Get the captured group `\1`, and put "**" between it.
+
+**improve**: check if it is possible to put a "\" if the captured group has a "*"(to not conflict the character * with the reserved * from markdown)
+</p>
+</details>
