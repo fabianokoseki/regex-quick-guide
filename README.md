@@ -49,7 +49,7 @@ https://aurelio.net/regex/apostila-conhecendo-regex.pdf
 
 # Examples
 
-### 1. Insert bolding from markup(\*\*word\**) between the words before the "=" sign
+### 1. Insert bolding from markdown(\*\*word\**) between the words before the "=" sign
 
 ```
 \d = any digit  
