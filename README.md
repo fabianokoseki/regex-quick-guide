@@ -2,7 +2,7 @@
 
 **To learn regex**
 <br>
-https://regexone.com/problem/matching_phone_numbers?
+https://regexone.com/
 
 **To parse regex**
 <br>
